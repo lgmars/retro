@@ -31,8 +31,8 @@ public:
 	void reset();
 	AddressSpace* getAddressSpace();
 	const void* getImageData() { return m_imgData; }
-	int getImageHeight() { return m_avInfo.geometry.base_height; }
-	int getImageWidth() { return m_avInfo.geometry.base_width; }
+	int getImageHeight() { return m_imgHeight > 0 ? m_imgHeight : m_avInfo.geometry.base_height; }
+	int getImageWidth() { return m_imgWidth > 0 ? m_imgWidth : m_avInfo.geometry.base_width; }
 	int getImagePitch() { return m_imgPitch; }
 	int getImageDepth() { return m_imgDepth; }
 	double getFrameRate() { return m_avInfo.timing.fps; }
@@ -74,6 +74,8 @@ private:
 	// Video frame info
 	const void* m_imgData = nullptr;
 	size_t m_imgPitch = 0;
+	unsigned m_imgHeight = 0;
+	unsigned m_imgWidth = 0;
 	int m_imgDepth = 0;
 
 	// Audio buffer; accumulated during run()

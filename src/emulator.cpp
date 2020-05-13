@@ -384,10 +384,12 @@ bool Emulator::cbEnvironment(unsigned cmd, void* data) {
 	return false;
 }
 
-void Emulator::cbVideoRefresh(const void* data, unsigned, unsigned, size_t pitch) {
+void Emulator::cbVideoRefresh(const void* data, unsigned width, unsigned height, size_t pitch) {
 	assert(s_loadedEmulator);
 	if (data) {
 		s_loadedEmulator->m_imgData = data;
+		s_loadedEmulator->m_imgHeight = height;
+		s_loadedEmulator->m_imgWidth = width;
 	}
 	if (pitch) {
 		s_loadedEmulator->m_imgPitch = pitch;

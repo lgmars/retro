@@ -1,0 +1,15 @@
+{
+    "Psx": {
+        "lib": "mednafen_psx",
+        "ext": ["cue"],
+        "rambase": 8257536,
+        "keybinds": ["Y", "U", "I", "O", "UP", "DOWN", "LEFT", "RIGHT", "X", "S", "Q", "W", "V", "F", "E", "R"],
+        "buttons": ["SELECT", "L3", "R3", "START", "UP", "RIGHT", "DOWN", "LEFT", "L2", "R2", "L1", "R1", "X", "A", "B", "Y"],
+        "types": ["|u1", "<u2", "<u4", "|i1", "<i2", "<i4", "|d1", "<d2", ">d4", "<d4", ">d6", ">d8", ">n4", ">n6", ">n8"],
+        "actions": [
+            [[], ["UP"], ["DOWN"]],
+            [[], ["LEFT"], ["RIGHT"]],
+            [[], ["A"], ["B"], ["X"], ["Y"]]
+        ]
+    }
+}
