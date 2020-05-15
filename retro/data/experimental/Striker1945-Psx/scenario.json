@@ -2,7 +2,7 @@
   "done": {
     "variables": {
       "lives": {
-        "op": "negative"
+        "op": "zero"
       }
     }
   },
